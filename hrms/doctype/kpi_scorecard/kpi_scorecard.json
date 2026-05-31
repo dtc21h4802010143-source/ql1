@@ -1,0 +1,21 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Scorecard",
+  "module": "HRMS",
+  "custom": false,
+  "fields": [
+    {"label":"Employee","fieldname":"employee","fieldtype":"Link","options":"Employee","reqd":1},
+    {"label":"Period Start","fieldname":"period_start","fieldtype":"Date"},
+    {"label":"Period End","fieldname":"period_end","fieldtype":"Date"},
+    {"label":"KPI Entries","fieldname":"kpi_entries","fieldtype":"Table","options":"KPI Scorecard Entry"},
+    {"label":"Total Score","fieldname":"total_score","fieldtype":"Float"},
+    {"label":"Status","fieldname":"status","fieldtype":"Select","options":"Draft\nSubmitted\nReviewed\nFinal"}
+  ],
+  "permissions": [
+    {"role":"Employee","read":1,"write":0,"create":1,"delete":0},
+    {"role":"Manager","read":1,"write":1,"create":1,"delete":0},
+    {"role":"HR Manager","read":1,"write":1,"create":1,"delete":1},
+    {"role":"System Manager","read":1,"write":1,"create":1,"delete":1}
+  ],
+  "is_single": 0
+}

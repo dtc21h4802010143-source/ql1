@@ -1,0 +1,33 @@
+yarn run v1.22.22
+$ cd frontend && yarn dev
+$ vite
+node:internal/process/per_thread:277
+      throw new ErrnoException(err, 'kill');
+      ^
+
+Error: kill ENOSYS
+    at process.kill (node:internal/process/per_thread:277:13)
+    at process.listener (C:\Users\bạc cầm ngọc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:76945:15)
+    at process.emit (node:events:509:28) {
+  errno: -4054,
+  code: 'ENOSYS',
+  syscall: 'kill'
+}
+
+Node.js v24.15.0
+error Command failed with exit code 3221225786.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+node:internal/process/per_thread:277
+      throw new ErrnoException(err, 'kill');
+      ^
+
+Error: kill ENOSYS
+    at process.kill (node:internal/process/per_thread:277:13)
+    at process.listener (C:\Users\bạc cầm ngọc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:76945:15)
+    at process.emit (node:events:509:28) {
+  errno: -4054,
+  code: 'ENOSYS',
+  syscall: 'kill'
+}
+
+Node.js v24.15.0

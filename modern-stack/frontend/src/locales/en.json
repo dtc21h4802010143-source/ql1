@@ -1,0 +1,208 @@
+{
+  "app": {
+    "title": "Modern HRMS",
+    "name": "WorkOS"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "admin": "Admin Center",
+    "tasks": "Tasks",
+    "task_form": "Task Form",
+    "task_detail": "Task Detail",
+    "kpis": "KPI",
+    "team_kpi": "Team KPI",
+    "my_kpi": "My KPI",
+    "leave": "Leave",
+    "attendance": "Attendance",
+    "expense_claim": "Expense Claim",
+    "employee_advance": "Employee Advance",
+    "salary_slip": "Salary Slip",
+    "profile": "Profile",
+    "settings": "App Settings",
+    "notifications": "Notifications",
+    "assistant": "AI Assistant",
+    "reports": "Reports"
+  },
+  "ai": {
+    "title": "AI assistant",
+    "description": "Summarize tasks, suggest priorities and generate weekly reports per role."
+  },
+  "header": {
+    "welcome": "Welcome back",
+    "guest": "Guest"
+  },
+  "buttons": {
+    "en": "EN",
+    "vi": "VI"
+  }
+  ,
+  "pages": {
+    "tasks": {
+      "title": "Task management",
+      "description": "Managers assign work, employees update progress, admins monitor the system.",
+      "search_placeholder": "Search task title or description",
+      "filter_all": "All status",
+      "sort_dueDate": "Sort by due date",
+      "sort_priority": "Sort by priority",
+      "button_add": "Add task",
+      "table": {
+        "task": "Task",
+        "assignee": "Assignee",
+        "priority": "Priority",
+        "progress": "Progress",
+        "due_date": "Due date"
+      },
+      "no_items": "No tasks found."
+    },
+    "home": {
+      "workspace": "workspace",
+      "description": "Unified demo cockpit for task management, KPI review, notifications and the remaining HR modules ported to React UI.",
+      "modules_available": "Modules available",
+      "active_notifications": "Active notifications",
+      "realtime_channels": "Realtime channels",
+      "ai_assistance_on": "AI assistance",
+      "module_coverage_title": "Module coverage",
+      "module_coverage_desc": "Modules ported into the React UI so far for the selected role.",
+      "demo_actions_title": "Demo actions",
+      "demo_actions_desc": "Quick entry points for manager, employee and admin demo flows."
+    },
+    "dashboard": {
+      "recent_activity": "Recent activity",
+      "recent_activity_desc": "Task workflow overview",
+      "kpi_snapshot": "KPI snapshot",
+      "final_score": "Final score"
+    },
+    "admin": {
+      "title": "Admin center",
+      "description": "Manage seed data, departments, employees and KPI periods for the demo build.",
+      "overview": "Overview",
+      "employees": "Employees",
+      "departments": "Departments",
+      "kpi_periods": "KPI periods",
+      "ranking": "KPI ranking",
+      "lock_period": "Lock period",
+      "reset_demo": "Reset demo data",
+      "protected_data": "Protected demo data",
+      "period_status": "Status",
+      "no_employees": "No employees found.",
+      "no_departments": "No departments found.",
+      "no_periods": "No KPI periods found.",
+      "no_ranking": "No KPI ranking available.",
+      "locked": "Locked",
+      "open": "Open",
+      "submitted": "Submitted"
+    },
+    "kpis": {
+      "title": "KPI dashboard",
+      "description": "Visual KPI overview for each role",
+      "productivity": "Productivity",
+      "quality": "Quality",
+      "timeliness": "Timeliness",
+      "export_pdf": "Export PDF"
+    },
+      "attendance": {
+        "title": "Attendance",
+        "description": "Fast review for employee and manager.",
+        "checkin_title": "Check-in",
+        "checkin_desc": "Quick self check-in for demo flow.",
+        "note_placeholder": "Note",
+        "checkin_button": "Check in",
+        "shifts_title": "Shift assignments",
+        "shifts_desc": "Manager assignment and employee request flow."
+      },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Realtime alerts for tasks, deadlines and KPI warnings.",
+      "mark_all": "Mark all as read",
+      "refresh": "Refresh",
+      "read": "Read",
+      "unread": "Unread",
+      "mark_read": "Mark read",
+      "no_items": "No notifications yet."
+    },
+    "expense": {
+      "title": "Expense claims",
+      "description": "Travel, meal and project expense flows ready for demo.",
+      "new_title": "New expense claim",
+      "title_placeholder": "Title",
+      "amount_placeholder": "Amount",
+      "submit": "Submit"
+    },
+    "advance": {
+      "title": "Employee advance",
+      "description": "Advance request and reimbursement overview.",
+      "request_title": "Request advance",
+      "purpose_placeholder": "Purpose",
+      "amount_placeholder": "Amount",
+      "submit": "Submit"
+    },
+    "salary": {
+      "title": "Salary slip",
+      "description": "Readable salary statement for demo and explanation.",
+      "view_detail": "View salary detail"
+    },
+    "profile": {
+      "title": "Employee profile",
+      "description": "Unified profile, status and access summary for demo roles.",
+      "full_name": "Full name",
+      "role": "Role",
+      "email": "Email",
+      "user_id": "User ID",
+      "edit": "Edit profile"
+    },
+    "settings": {
+      "title": "App settings",
+      "description": "Theme, notifications and productivity preferences.",
+      "theme": "Theme",
+      "notifications": "Notifications",
+      "default_dashboard": "Default dashboard",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "dark_mode": "Dark mode",
+      "light_mode": "Light mode",
+      "toggle_notifications": "Toggle notifications"
+    },
+    "assistant": {
+      "title": "AI Assistant",
+      "description": "Assist managers and employees with contextual replies.",
+      "placeholder": "Ask about KPI, deadlines, weekly reports...",
+      "send": "Send"
+    },
+    "login": {
+      "title": "Sign in",
+      "description": "Use the demo account to explore the new dashboard.",
+      "email": "Email",
+      "password": "Password",
+      "signing_in": "Signing in...",
+      "sign_in": "Sign in"
+    },
+    "reports": {
+      "title": "Reports",
+      "description": "Weekly and monthly reporting CRUD for demo and management.",
+      "search_placeholder": "Search title, summary or category",
+      "filter_all": "All status",
+      "export_csv": "Export CSV",
+      "export_excel": "Export Excel",
+      "export_pdf": "Export PDF",
+      "clear_filters": "Clear filters",
+      "report_title": "Report title",
+      "period_label": "Period label",
+      "report_summary": "Report summary",
+      "create_report": "Create report",
+      "update_report": "Update report",
+      "cancel_edit": "Cancel edit",
+      "no_items": "No reports yet."
+    }
+      ,
+      "leave": {
+        "title": "Leave management",
+        "description": "Request and approval flow aligned with the legacy workflow.",
+        "new_title": "New leave request",
+        "new_desc": "Submit a new request without leaving the page.",
+        "leave_type": "Leave type",
+        "reason": "Reason",
+        "create_button": "Create request"
+      }
+  }
+}

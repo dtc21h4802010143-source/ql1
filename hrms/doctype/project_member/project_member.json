@@ -1,0 +1,15 @@
+{
+  "doctype": "DocType",
+  "name": "Project Member",
+  "module": "HRMS",
+  "istable": 1,
+  "custom": false,
+  "fields": [
+    {"label":"User","fieldname":"user","fieldtype":"Link","options":"User","reqd":1},
+    {"label":"Role","fieldname":"role","fieldtype":"Data"},
+    {"label":"Added On","fieldname":"added_on","fieldtype":"Datetime"}
+  ],
+  "permissions": [
+    {"role":"System Manager","read":1,"write":1}
+  ]
+}

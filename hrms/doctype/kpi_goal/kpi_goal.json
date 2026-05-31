@@ -1,0 +1,23 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Goal",
+  "module": "HRMS",
+  "custom": false,
+  "fields": [
+    {"label":"Title","fieldname":"title","fieldtype":"Data","reqd":1},
+    {"label":"Description","fieldname":"description","fieldtype":"Text"},
+    {"label":"Owner","fieldname":"owner","fieldtype":"Link","options":"User"},
+    {"label":"Measure Type","fieldname":"measure_type","fieldtype":"Select","options":"Numeric\nBoolean\nQualitative"},
+    {"label":"Target Value","fieldname":"target_value","fieldtype":"Float"},
+    {"label":"Unit","fieldname":"unit","fieldtype":"Data"},
+    {"label":"Start Date","fieldname":"start_date","fieldtype":"Date"},
+    {"label":"End Date","fieldname":"end_date","fieldtype":"Date"},
+    {"label":"Weight","fieldname":"weight","fieldtype":"Float","default":100},
+    {"label":"Calculation Rule","fieldname":"calculation_rule","fieldtype":"Text"},
+    {"label":"Linked Tasks","fieldname":"linked_tasks","fieldtype":"Table","options":"KPI Entry"}
+  ],
+  "permissions": [
+    {"role":"System Manager","read":1,"write":1,"create":1}
+  ],
+  "is_single": 0
+}

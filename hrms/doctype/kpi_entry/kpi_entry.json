@@ -1,0 +1,17 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Entry",
+  "module": "HRMS",
+  "istable": 1,
+  "custom": false,
+  "fields": [
+    {"label":"KPI Goal","fieldname":"kpi_goal","fieldtype":"Link","options":"KPI Goal"},
+    {"label":"Task","fieldname":"task","fieldtype":"Link","options":"Task"},
+    {"label":"Target","fieldname":"target","fieldtype":"Float"},
+    {"label":"Achieved","fieldname":"achieved","fieldtype":"Float"},
+    {"label":"Score","fieldname":"score","fieldtype":"Float"}
+  ],
+  "permissions": [
+    {"role":"System Manager","read":1,"write":1}
+  ]
+}

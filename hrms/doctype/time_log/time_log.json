@@ -1,0 +1,16 @@
+{
+  "doctype": "DocType",
+  "name": "Time Log",
+  "module": "HRMS",
+  "custom": false,
+  "fields": [
+    {"label":"Task","fieldname":"task","fieldtype":"Link","options":"Task","reqd":1},
+    {"label":"User","fieldname":"user","fieldtype":"Link","options":"User","reqd":1},
+    {"label":"Date","fieldname":"date","fieldtype":"Date"},
+    {"label":"Hours","fieldname":"hours","fieldtype":"Float"},
+    {"label":"Notes","fieldname":"notes","fieldtype":"Data"}
+  ],
+  "permissions": [
+    {"role":"System Manager","read":1,"write":1}
+  ]
+}
