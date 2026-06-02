@@ -12,7 +12,7 @@ import { errorHandler } from "./middlewares/error.js";
 export const createApp = () => {
 	const app = express();
 	const httpServer = createServer(app);
-	const frontendDistPath = fileURLToPath(new URL("../../frontend/dist", import.meta.url));
+	const frontendDistPath = fileURLToPath(new URL("../../../frontend/dist", import.meta.url));
 	const frontendIndexPath = path.join(frontendDistPath, "index.html");
 	const serveFrontend = fs.existsSync(frontendIndexPath);
 	
