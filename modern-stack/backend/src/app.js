@@ -12,10 +12,7 @@ import { errorHandler } from "./middlewares/error.js";
 export const createApp = () => {
 	const app = express();
 	const httpServer = createServer(app);
-	// Thử tìm ở thư mục gốc của monorepo, nếu không thấy thì tìm ở thư mục ngang hàng backend
-let frontendDistPath = path.resolve(process.cwd(), "modern-stack/frontend/dist");
-if (!fs.existsSync(path.join(frontendDistPath, "index.html"))) {
-    frontendDistPath = path.resolve(process.cwd(), "frontend/dist");
+	const frontendDistPath = fileURLToPath(new URL("../frontend/dist", import.meta.url));
 }
 	const frontendIndexPath = path.join(frontendDistPath, "index.html");
 	const serveFrontend = fs.existsSync(frontendIndexPath);
