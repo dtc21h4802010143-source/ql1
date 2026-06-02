@@ -20,6 +20,8 @@
     "dev:backend": "cd modern-stack/backend && npm run dev",
     "dev:frontend": "cd modern-stack/frontend && npm run dev",
     "dev": "concurrently -k \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "render:build": "npm run install-modern-backend && npm run install-modern-frontend && npm --prefix modern-stack/frontend run build",
+    "render:start": "npm --prefix modern-stack/backend start",
     "dev-pwa": "cd frontend && yarn dev",
     "dev-roster": "cd roster && yarn dev",
     "build": "yarn build-pwa && yarn build-roster",

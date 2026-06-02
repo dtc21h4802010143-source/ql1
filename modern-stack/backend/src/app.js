@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
+import fs from "fs";
 import { createServer } from "http";
+import path from "path";
+import { fileURLToPath } from "url";
 import { Server as SocketIOServer } from "socket.io";
 import { env } from "./config/env.js";
 import { createRoutes } from "./routes/index.js";
@@ -9,6 +12,9 @@ import { errorHandler } from "./middlewares/error.js";
 export const createApp = () => {
 	const app = express();
 	const httpServer = createServer(app);
+	const frontendDistPath = fileURLToPath(new URL("../../frontend/dist", import.meta.url));
+	const frontendIndexPath = path.join(frontendDistPath, "index.html");
+	const serveFrontend = fs.existsSync(frontendIndexPath);
 	
 	// CORS configuration to accept both 5173 and other localhost ports
 	const corsOrigin = (origin, callback) => {
@@ -37,6 +43,17 @@ export const createApp = () => {
 	});
 
 	app.use("/api", createRoutes());
+
+	if (serveFrontend) {
+		app.use(express.static(frontendDistPath));
+		app.get("*", (req, res, next) => {
+			if (req.path.startsWith("/api")) {
+				return next();
+			}
+			res.sendFile(frontendIndexPath);
+		});
+	}
+
 	app.use(errorHandler);
 
 	return { app, httpServer, io };
