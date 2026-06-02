@@ -13,10 +13,9 @@ export const createApp = () => {
     const app = express();
     const httpServer = createServer(app);
 
-    // 1. Định nghĩa đường dẫn tĩnh linh hoạt
-   const frontendDistPath = fileURLToPath(new URL("../../../frontend/dist", import.meta.url));
-    const frontendIndexPath = path.join(frontendDistPath, "index.html");
-    const serveFrontend = fs.existsSync(frontendIndexPath);
+ const frontendDistPath = fileURLToPath(new URL("../../../frontend/dist", import.meta.url));
+const frontendIndexPath = path.join(frontendDistPath, "index.html");
+const serveFrontend = fs.existsSync(frontendIndexPath);
 
     // 2. Cấu hình CORS
     const corsOrigin = (origin, callback) => {
