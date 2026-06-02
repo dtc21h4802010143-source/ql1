@@ -12,10 +12,9 @@ import { errorHandler } from "./middlewares/error.js";
 export const createApp = () => {
     const app = express();
     const httpServer = createServer(app);
-
- const frontendDistPath = fileURLToPath(new URL("../../../frontend/dist", import.meta.url));
-const frontendIndexPath = path.join(frontendDistPath, "index.html");
-const serveFrontend = fs.existsSync(frontendIndexPath);
+// 1. Định nghĩa đường dẫn tĩnh (Đứng từ src/app.js trỏ vào src/public)
+    const frontendDistPath = fileURLToPath(new URL("./public", import.meta.url));
+    const frontendIndexPath = path.join(frontendDistPath, "index.html");
 
     // 2. Cấu hình CORS
     const corsOrigin = (origin, callback) => {
@@ -36,21 +35,31 @@ const serveFrontend = fs.existsSync(frontendIndexPath);
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
 
-    // 3. Khởi tạo Routes API
+    // 3. Khởi tạo Routes API (Bắt buộc phải chạy trước giao diện để không nghẽn)
     createRoutes(app);
 
-    // 4. Cấu hình phục vụ file Frontend tĩnh nếu tìm thấy thư mục dist
-    if (serveFrontend) {
-        app.use(express.static(frontendDistPath));
-        app.get("*", (req, res) => {
+    // 4. Giải pháp Lazy-load Static Files: Chỉ quét ổ đĩa khi có người dùng truy cập vào trang chủ
+    app.use((req, res, next) => {
+        // Nếu là các API route thì bỏ qua, nhường xử lý cho hệ thống API
+        if (req.url.startsWith('/api')) return next();
+        
+        if (fs.existsSync(frontendIndexPath)) {
+            express.static(frontendDistPath, { maxAge: '1d' })(req, res, next);
+        } else {
+            next();
+        }
+    });
+
+    // Trả về file index.html cho các route lồng nhau của Vue Router
+    app.get("*", (req, res, next) => {
+        if (req.url.startsWith('/api')) return next();
+        
+        if (fs.existsSync(frontendIndexPath)) {
             res.sendFile(frontendIndexPath);
-        });
-    } else {
-        // Dự phòng nếu không tìm thấy static files để tránh lỗi Cannot GET /
-        app.get("/", (req, res) => {
-            res.json({ message: "Modern HRMS Backend is running, but Frontend static files are missing." });
-        });
-    }
+        } else {
+            res.json({ message: "Backend is running, but public files are missing." });
+        }
+    });
 
     // 5. Cấu hình Socket.IO
     const io = new SocketIOServer(httpServer, {
