@@ -32,7 +32,28 @@ echo "   Backend:  http://localhost:5000"
 echo "   Frontend: http://localhost:5173"
 echo "   API:      http://localhost:5000/api"
 echo ""
-echo "Press Ctrl+C to stop all services"
+
+# Start dev servers in background
+npm run dev &
+DEV_PID=$!
+
+# Wait a few seconds for services to start
+sleep 5
+
+# Open browser automatically
+echo "🌐 Opening browser..."
+if [ "$(uname)" == "Darwin" ]; then
+    # macOS
+    open http://localhost:5173
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    # Linux
+    xdg-open http://localhost:5173 || true
+fi
+
+echo ""
+echo "✨ Modern HRMS is ready!"
+echo "   Press Ctrl+C to stop all services"
 echo ""
 
-npm run dev
+# Wait for dev server process
+wait $DEV_PID
