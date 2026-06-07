@@ -1,11 +1,24 @@
 import axios from "axios";
 
 const envApiUrl = typeof import.meta !== "undefined" && import.meta.env?.VITE_API_URL?.trim();
-const unsafeLocalUrl = envApiUrl && /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?\/?$/.test(envApiUrl);
 const normalizedEnvUrl = envApiUrl ? envApiUrl.replace(/\/$/, "") : "";
-const apiBaseUrl = normalizedEnvUrl && !unsafeLocalUrl
-	? (normalizedEnvUrl.startsWith("/") ? normalizedEnvUrl : `/${normalizedEnvUrl}`)
-	: "/api";
+let apiBaseUrl = "/api";
+
+if (normalizedEnvUrl) {
+	if (normalizedEnvUrl.startsWith("/")) {
+		apiBaseUrl = normalizedEnvUrl;
+	} else {
+		try {
+			const parsedUrl = new URL(normalizedEnvUrl);
+			const isLocalHost = ["localhost", "127.0.0.1"].includes(parsedUrl.hostname);
+			if (!isLocalHost && ["http:", "https:"].includes(parsedUrl.protocol)) {
+				apiBaseUrl = normalizedEnvUrl;
+			}
+		} catch {
+			apiBaseUrl = "/api";
+		}
+	}
+}
 
 export const api = axios.create({
 	baseURL: apiBaseUrl,
