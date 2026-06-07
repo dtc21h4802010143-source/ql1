@@ -6,7 +6,7 @@
     "install:all": "npm install && npm --prefix modern-stack/backend install && npm --prefix modern-stack/frontend install",
     "backend": "npm --prefix modern-stack/backend run dev",
     "frontend": "npm --prefix modern-stack/frontend run dev",
-    "dev": "concurrently -k \"npm run backend\" \"npm run frontend\" --prefix \"[BACKEND] \" --prefix \"[FRONTEND] \"",
+    "dev": "concurrently -k -n backend,frontend \"npm run backend\" \"npm run frontend\"",
     "build:all": "npm --prefix modern-stack/backend install && npm --prefix modern-stack/frontend install && npm --prefix modern-stack/frontend run build",
     "clean": "rm -rf modern-stack/backend/node_modules modern-stack/frontend/node_modules modern-stack/frontend/dist"
   },
