@@ -1,19 +1,225 @@
-README — Run project locally (no Docker)
-=======================================
+# Modern HRMS - Localhost Development Setup
 
-Overview
---------
-This repository contains two main development stacks:
+## Prerequisites
+- Node.js 18+ 
+- npm 9+
+- Git
 
-- `modern-stack` — a Node.js + React demo backend/frontend. Backend can run in-memory using built-in seed data (no DB required), or connect to a MySQL DB via `DATABASE_URL`.
-- `hrms` — a Frappe-based Python application (heavy; recommended to run in WSL for full local installs).
+## Quick Start
 
-This README explains how to remove Docker and run the modern-stack locally for development. Full migration of `hrms` (Frappe) off Docker requires installing MariaDB/Redis/Python toolchain and is documented below.
+### Windows
+```bash
+git clone <repository>
+cd ql1-render-deploy
+start.bat
+```
 
-Quick start — modern-stack (recommended path)
--------------------------------------------
-1. Open a terminal and install Node.js (v18+).
-2. Backend (in-memory demo):
+### macOS/Linux
+```bash
+git clone <repository>
+cd ql1-render-deploy
+chmod +x start.sh
+./start.sh
+```
+
+### Manual Setup
+```bash
+# Install all dependencies
+npm install:all
+
+# Start backend and frontend concurrently
+npm run dev
+```
+
+## Services After Startup
+
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:5000
+- **API Endpoint**: http://localhost:5000/api
+
+## Demo Credentials
+
+### Admin Account
+- Email: `admin@hrms.local`
+- Password: `admin123`
+
+### Manager Account
+- Email: `manager@hrms.local`
+- Password: `manager123`
+
+### Employee Account
+- Email: `employee@hrms.local`
+- Password: `employee123`
+
+## Project Structure
+
+```
+ql1-render-deploy/
+├── modern-stack/
+│   ├── backend/          # Node.js + Express API
+│   │   ├── src/
+│   │   │   ├── app.js
+│   │   │   ├── server.js
+│   │   │   ├── config/
+│   │   │   ├── routes/
+│   │   │   ├── services/
+│   │   │   ├── repositories/
+│   │   │   └── data/
+│   │   ├── package.json
+│   │   └── .env.example
+│   ├── frontend/         # React + Vite
+│   │   ├── src/
+│   │   ├── package.json
+│   │   ├── vite.config.js
+│   │   └── .env.example
+│   └── database/
+├── package.json          # Root startup scripts
+├── start.sh             # Linux/macOS launcher
+├── start.bat            # Windows launcher
+└── README_LOCALHOST.md
+```
+
+## Configuration Files
+
+### Backend (.env)
+```env
+PORT=5000
+CLIENT_URL=http://localhost:5173
+DATABASE_URL=          # Leave empty for in-memory demo
+JWT_SECRET=modern-hrms-dev-secret
+NODE_ENV=development
+```
+
+### Frontend (.env)
+```env
+# Auto-detects http://localhost:5000/api
+# Leave empty or set VITE_API_URL=/api
+```
+
+## Architecture
+
+**Backend** (Port 5000):
+- Express.js REST API
+- Socket.IO for real-time updates
+- In-memory seed data (no database required)
+- JWT authentication
+
+**Frontend** (Port 5173):
+- React 18 + Vite
+- Tailwind CSS + Radix UI
+- Zustand state management
+- React Router
+
+**Database**:
+- Optional MySQL (set DATABASE_URL)
+- Default: In-memory demo data
+
+## Development Scripts
+
+```bash
+# Install dependencies for all packages
+npm install:all
+
+# Start only backend (port 5000)
+npm run backend
+
+# Start only frontend (port 5173)
+npm run frontend
+
+# Start both concurrently (recommended)
+npm run dev
+
+# Build frontend for production
+npm run build:all
+
+# Clean all node_modules and dist
+npm run clean
+```
+
+## Features Included
+
+- ✅ Employee Management
+- ✅ Task & Project Management
+- ✅ Attendance Tracking
+- ✅ Shift Management
+- ✅ Leave Requests
+- ✅ KPI & Performance Review
+- ✅ Expense Claims
+- ✅ Advance Requests
+- ✅ Salary Slips (Basic)
+- ✅ Reports & Analytics
+- ✅ Role-based Access Control
+- ✅ Real-time Notifications
+- ✅ Document Export (PDF, Excel, CSV)
+
+## Troubleshooting
+
+### Port Already in Use
+```bash
+# Change backend port
+PORT=3000 npm run backend
+
+# Change frontend port in modern-stack/frontend/vite.config.js
+```
+
+### Dependencies Not Installing
+```bash
+npm run clean
+npm install:all
+npm run dev
+```
+
+### API Connection Issues
+Frontend automatically connects to `http://localhost:5000/api`. If issues persist:
+1. Verify backend is running on port 5000
+2. Check browser console for CORS errors
+3. Ensure `CLIENT_URL` matches frontend URL in `.env`
+
+### Cannot Start Services
+Ensure Node.js 18+ is installed:
+```bash
+node --version
+npm --version
+```
+
+## Performance Notes
+
+- First startup may take 1-2 minutes to install dependencies
+- Frontend hot-reload enabled (Vite)
+- Backend file-watch reload enabled
+- In-memory database is fast but resets on restart
+
+## Production Build
+
+To build for production:
+```bash
+npm run build:all
+```
+
+This creates a production-optimized frontend build in `modern-stack/frontend/dist/`.
+
+## Next Steps
+
+1. **Explore the UI**: Open http://localhost:5173
+2. **Login with demo account**: admin@hrms.local / admin123
+3. **Check API docs**: Visit http://localhost:5000/api/health
+4. **View source code**:
+   - Backend routes: `modern-stack/backend/src/routes/`
+   - Frontend pages: `modern-stack/frontend/src/pages/`
+   - Services: `modern-stack/backend/src/services/`
+
+## Support
+
+For issues, check:
+- Browser console (F12) for frontend errors
+- Terminal output for backend errors
+- Ensure both ports (5000, 5173) are available
+- Verify Node.js 18+ and npm 9+
+
+---
+
+**Modern HRMS** - Open Source HR & Payroll System
+
 
 ```bash
 cd modern-stack/backend

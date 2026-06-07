@@ -8,7 +8,7 @@
     "frontend": "npm --prefix modern-stack/frontend run dev",
     "dev": "concurrently -k \"npm run backend\" \"npm run frontend\" --prefix \"[BACKEND] \" --prefix \"[FRONTEND] \"",
     "build:all": "npm --prefix modern-stack/backend install && npm --prefix modern-stack/frontend install && npm --prefix modern-stack/frontend run build",
-    "clean": "rm -rf modern-stack/backend/node_modules modern-stack/frontend/node_modules modern-stack/frontend/dist"
+    "clean": "rmdir /s /q modern-stack\\backend\\node_modules modern-stack\\frontend\\node_modules modern-stack\\frontend\\dist 2>nul || true"
   },
   "devDependencies": {
     "concurrently": "^9.0.1"

@@ -22,7 +22,8 @@ if (normalizedEnvUrl) {
 
 export const api = axios.create({
 	baseURL: apiBaseUrl,
-	timeout: 15000
+	timeout: 15000,
+	withCredentials: true
 });
 
 api.interceptors.request.use((config) => {
