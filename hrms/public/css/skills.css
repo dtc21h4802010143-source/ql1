@@ -1,0 +1,4 @@
+.hrms-skill-container{padding:16px;background:linear-gradient(180deg,#fff,#fbfbff);border-radius:8px;box-shadow:0 6px 18px rgba(11,22,45,0.06);max-width:720px;margin:12px auto;font-family:Inter,Arial,Helvetica,sans-serif}
+.hrms-skill-title{font-size:1.1rem;margin-bottom:12px;color:#0b1a2b}
+.hrms-skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.hrms-skill-card{background:#f6f9ff;padding:10px;border-radius:6px;color:#09203a;text-align:center;font-weight:600;border:1px solid rgba(9,32,58,0.04)}

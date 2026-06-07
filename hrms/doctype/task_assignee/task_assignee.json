@@ -1,0 +1,15 @@
+{
+  "doctype": "DocType",
+  "name": "Task Assignee",
+  "module": "HRMS",
+  "istable": 1,
+  "custom": false,
+  "fields": [
+    {"label":"User","fieldname":"user","fieldtype":"Link","options":"User","reqd":1},
+    {"label":"Assigned On","fieldname":"assigned_on","fieldtype":"Datetime"},
+    {"label":"Role","fieldname":"role","fieldtype":"Data"}
+  ],
+  "permissions": [
+    {"role":"System Manager","read":1,"write":1}
+  ]
+}

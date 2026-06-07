@@ -1,0 +1,208 @@
+{
+  "app": {
+    "title": "Modern HRMS",
+    "name": "WorkOS"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "dashboard": "Bảng điều khiển",
+    "admin": "Trung tâm quản trị",
+    "tasks": "Công việc",
+    "task_form": "Form Công việc",
+    "task_detail": "Chi tiết Công việc",
+    "kpis": "KPI",
+    "team_kpi": "KPI Nhóm",
+    "my_kpi": "KPI của tôi",
+    "leave": "Nghỉ phép",
+    "attendance": "Chấm công",
+    "expense_claim": "Yêu cầu hoàn chi",
+    "employee_advance": "Tạm ứng nhân viên",
+    "salary_slip": "Bảng lương",
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt ứng dụng",
+    "notifications": "Thông báo",
+    "assistant": "Trợ lý AI",
+    "reports": "Báo cáo"
+  },
+  "ai": {
+    "title": "Trợ lý AI",
+    "description": "Tóm tắt công việc, gợi ý mức độ ưu tiên và tạo báo cáo tuần cho từng vai trò."
+  },
+  "header": {
+    "welcome": "Chào mừng trở lại",
+    "guest": "Khách"
+  },
+  "buttons": {
+    "en": "EN",
+    "vi": "VI"
+  }
+  ,
+  "pages": {
+    "tasks": {
+      "title": "Quản lý công việc",
+      "description": "Manager giao việc, employee cập nhật tiến độ, admin theo dõi toàn hệ thống.",
+      "search_placeholder": "Tìm tiêu đề hoặc mô tả công việc",
+      "filter_all": "Tất cả trạng thái",
+      "sort_dueDate": "Sắp theo hạn",
+      "sort_priority": "Sắp theo độ ưu tiên",
+      "button_add": "Thêm công việc",
+      "table": {
+        "task": "Công việc",
+        "assignee": "Người thực hiện",
+        "priority": "Mức ưu tiên",
+        "progress": "Tiến độ",
+        "due_date": "Hạn hoàn thành"
+      },
+      "no_items": "Không tìm thấy công việc."
+    },
+    "home": {
+      "workspace": "không gian làm việc",
+      "description": "Bảng điều khiển demo tổng hợp cho quản lý công việc, đánh giá KPI, thông báo và các module HR khác.",
+      "modules_available": "Các module có sẵn",
+      "active_notifications": "Thông báo đang hoạt động",
+      "realtime_channels": "Kênh realtime",
+      "ai_assistance_on": "Trợ lý AI",
+      "module_coverage_title": "Phạm vi module",
+      "module_coverage_desc": "Các module đã được chuyển sang giao diện React cho vai trò được chọn.",
+      "demo_actions_title": "Hành động demo",
+      "demo_actions_desc": "Lối tắt cho luồng demo của manager, employee và admin."
+    },
+    "dashboard": {
+      "recent_activity": "Hoạt động gần đây",
+      "recent_activity_desc": "Tổng quan luồng công việc",
+      "kpi_snapshot": "Tổng quan KPI",
+      "final_score": "Điểm cuối"
+    },
+    "admin": {
+      "title": "Trung tâm quản trị",
+      "description": "Quản lý dữ liệu seed, phòng ban, nhân viên và kỳ KPI cho bản demo.",
+      "overview": "Tổng quan",
+      "employees": "Nhân viên",
+      "departments": "Phòng ban",
+      "kpi_periods": "Kỳ KPI",
+      "ranking": "Xếp hạng KPI",
+      "lock_period": "Khóa kỳ",
+      "reset_demo": "Reset dữ liệu demo",
+      "protected_data": "Dữ liệu demo được bảo vệ",
+      "period_status": "Trạng thái",
+      "no_employees": "Không có nhân viên.",
+      "no_departments": "Không có phòng ban.",
+      "no_periods": "Không có kỳ KPI.",
+      "no_ranking": "Chưa có xếp hạng KPI.",
+      "locked": "Đã khóa",
+      "open": "Đang mở",
+      "submitted": "Đã nộp"
+    },
+    "kpis": {
+      "title": "Bảng KPI",
+      "description": "Tổng quan KPI dạng biểu đồ cho từng vai trò",
+      "productivity": "Năng suất",
+      "quality": "Chất lượng",
+      "timeliness": "Đúng hạn",
+      "export_pdf": "Xuất PDF"
+    },
+      "attendance": {
+        "title": "Chấm công",
+        "description": "Xem nhanh cho nhân viên và quản lý.",
+        "checkin_title": "Check-in",
+        "checkin_desc": "Check-in nhanh cho luồng demo.",
+        "note_placeholder": "Ghi chú",
+        "checkin_button": "Check in",
+        "shifts_title": "Phân ca",
+        "shifts_desc": "Phân công quản lý và yêu cầu của nhân viên."
+      },
+    "notifications": {
+      "title": "Thông báo",
+      "description": "Cảnh báo realtime cho công việc, hạn chót và cảnh báo KPI.",
+      "mark_all": "Đánh dấu tất cả đã đọc",
+      "refresh": "Làm mới",
+      "read": "Đã đọc",
+      "unread": "Chưa đọc",
+      "mark_read": "Đánh dấu đã đọc",
+      "no_items": "Chưa có thông báo."
+    },
+    "expense": {
+      "title": "Yêu cầu hoàn chi",
+      "description": "Các luồng chi phí đi lại, ăn uống và dự án cho demo.",
+      "new_title": "Yêu cầu hoàn chi mới",
+      "title_placeholder": "Tiêu đề",
+      "amount_placeholder": "Số tiền",
+      "submit": "Gửi"
+    },
+      "advance": {
+        "title": "Tạm ứng nhân viên",
+        "description": "Tổng quan yêu cầu tạm ứng và hoàn trả.",
+        "request_title": "Yêu cầu tạm ứng",
+        "purpose_placeholder": "Mục đích",
+        "amount_placeholder": "Số tiền",
+        "submit": "Gửi"
+      },
+    "assistant": {
+      "title": "Trợ lý AI",
+      "description": "Hỗ trợ manager và employee bằng phản hồi theo ngữ cảnh.",
+      "placeholder": "Hỏi về KPI, hạn chót, báo cáo tuần...",
+      "send": "Gửi"
+    },
+    "salary": {
+      "title": "Bảng lương",
+      "description": "Bản sao kê lương dễ đọc cho demo và giải thích.",
+      "view_detail": "Xem chi tiết lương"
+    },
+    "profile": {
+      "title": "Hồ sơ nhân viên",
+      "description": "Hồ sơ, trạng thái và tổng quan quyền truy cập cho các vai trò demo.",
+      "full_name": "Họ và tên",
+      "role": "Vai trò",
+      "email": "Email",
+      "user_id": "Mã người dùng",
+      "edit": "Chỉnh sửa hồ sơ"
+    },
+    "settings": {
+      "title": "Cài đặt ứng dụng",
+      "description": "Chủ đề, thông báo và tùy chọn năng suất.",
+      "theme": "Giao diện",
+      "notifications": "Thông báo",
+      "default_dashboard": "Bảng điều khiển mặc định",
+      "enabled": "Bật",
+      "disabled": "Tắt",
+      "dark_mode": "Chế độ tối",
+      "light_mode": "Chế độ sáng",
+      "toggle_notifications": "Chuyển đổi thông báo"
+    },
+    "login": {
+      "title": "Đăng nhập",
+      "description": "Dùng tài khoản demo để trải nghiệm dashboard mới.",
+      "email": "Email",
+      "password": "Mật khẩu",
+      "signing_in": "Đang đăng nhập...",
+      "sign_in": "Đăng nhập"
+    },
+    "reports": {
+      "title": "Báo cáo",
+      "description": "CRUD báo cáo tuần và tháng cho demo và quản lý.",
+      "search_placeholder": "Tìm tiêu đề, tóm tắt hoặc loại",
+      "filter_all": "Tất cả trạng thái",
+      "export_csv": "Xuất CSV",
+      "export_excel": "Xuất Excel",
+      "export_pdf": "Xuất PDF",
+      "clear_filters": "Xóa bộ lọc",
+      "report_title": "Tiêu đề báo cáo",
+      "period_label": "Kỳ báo cáo",
+      "report_summary": "Tóm tắt báo cáo",
+      "create_report": "Tạo báo cáo",
+      "update_report": "Cập nhật báo cáo",
+      "cancel_edit": "Hủy chỉnh sửa",
+      "no_items": "Chưa có báo cáo."
+    }
+      ,
+      "leave": {
+        "title": "Quản lý nghỉ phép",
+        "description": "Luồng yêu cầu và phê duyệt theo workflow cũ.",
+        "new_title": "Yêu cầu nghỉ mới",
+        "new_desc": "Gửi yêu cầu mới mà không rời trang.",
+        "leave_type": "Loại nghỉ",
+        "reason": "Lý do",
+        "create_button": "Tạo yêu cầu"
+      }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "doctype": "DocType",
+  "name": "Task",
+  "module": "HRMS",
+  "custom": false,
+  "fields": [
+    {"label":"Subject","fieldname":"subject","fieldtype":"Data","reqd":1},
+    {"label":"Description","fieldname":"description","fieldtype":"Text"},
+    {"label":"Project","fieldname":"project","fieldtype":"Link","options":"Project"},
+    {"label":"Parent Task","fieldname":"parent_task","fieldtype":"Link","options":"Task"},
+    {"label":"Assigned To","fieldname":"assigned_to","fieldtype":"Table","options":"Task Assignee"},
+    {"label":"Status","fieldname":"status","fieldtype":"Select","options":"To Do\nIn Progress\nBlocked\nReview\nDone","default":"To Do"},
+    {"label":"Priority","fieldname":"priority","fieldtype":"Select","options":"Low\nMedium\nHigh\nCritical"},
+    {"label":"Start Date","fieldname":"start_date","fieldtype":"Date"},
+    {"label":"Due Date","fieldname":"due_date","fieldtype":"Date"},
+    {"label":"Estimated Hours","fieldname":"estimated_hours","fieldtype":"Float"}
+  ],
+  "permissions": [
+    {"role":"Employee","read":1,"write":0,"create":1,"delete":0},
+    {"role":"Manager","read":1,"write":1,"create":1,"delete":0},
+    {"role":"HR Manager","read":1,"write":1,"create":1,"delete":1},
+    {"role":"System Manager","read":1,"write":1,"create":1,"delete":1}
+  ],
+  "is_single": 0
+}

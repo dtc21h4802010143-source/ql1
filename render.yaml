@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hrms-modern-stack
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: npm run render:build
+    startCommand: npm run render:start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: JWT_SECRET
+        generateValue: true

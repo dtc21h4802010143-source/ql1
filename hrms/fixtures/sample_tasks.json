@@ -1,0 +1,24 @@
+[
+  {
+    "doctype": "Task",
+    "subject": "Onboard new employee",
+    "description": "Complete onboarding checklist for new hires",
+    "project": "HR Onboarding",
+    "status": "To Do",
+    "priority": "High",
+    "start_date": "2026-06-01",
+    "due_date": "2026-06-07",
+    "estimated_hours": 8
+  },
+  {
+    "doctype": "Task",
+    "subject": "Process payroll for June",
+    "description": "Run payroll and verify tax calculations",
+    "project": "Payroll",
+    "status": "To Do",
+    "priority": "Critical",
+    "start_date": "2026-06-25",
+    "due_date": "2026-06-30",
+    "estimated_hours": 12
+  }
+]

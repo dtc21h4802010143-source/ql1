@@ -1,0 +1,63 @@
+{
+ "app": "hrms",
+ "content": "[{\"id\":\"h-1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Những hành động</b></span>\",\"col\":12}},{\"id\":\"c-giao-viec\",\"type\":\"card\",\"data\":{\"card_name\":\"Giao việc\",\"col\":6}},{\"id\":\"c-danh-gia\",\"type\":\"card\",\"data\":{\"card_name\":\"Đánh giá KPI\",\"col\":6}},{\"id\":\"c-bao-cao\",\"type\":\"card\",\"data\":{\"card_name\":\"Báo cáo\",\"col\":12}}]",
+ "creation": "2026-05-20 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "user",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Nhân viên",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Giao việc",
+   "link_count": 0,
+   "link_to": "Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Đánh giá KPI",
+   "link_count": 0,
+    "link_to": "Employee Performance Feedback",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Báo cáo",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  }
+ ],
+ "module": "HR",
+ "name": "Nhan-vien",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Task",
+   "label": "Công việc của tôi",
+   "quick_list_filter": "{\"status\":[\"!=\",\"Closed\"],\"owner\":[\"=\",\"user\"]}"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Employee"
+  }
+ ],
+ "shortcuts": [],
+ "title": "Nhân viên",
+ "type": "Workspace"
+}

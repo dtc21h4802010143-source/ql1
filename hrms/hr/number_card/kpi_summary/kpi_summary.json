@@ -1,0 +1,12 @@
+{
+ "doctype": "Number Card",
+ "document_type": "Employee Performance Feedback",
+ "filters_json": "[]",
+ "function": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "KPI Summary",
+ "module": "HR",
+ "name": "KPI Summary",
+ "type": "Document Type"
+}

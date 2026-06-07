@@ -1,0 +1,23 @@
+{
+  "doctype": "DocType",
+  "name": "Performance Review",
+  "module": "HRMS",
+  "custom": false,
+  "fields": [
+    {"label":"Employee","fieldname":"employee","fieldtype":"Link","options":"Employee","reqd":1},
+    {"label":"Period Start","fieldname":"period_start","fieldtype":"Date"},
+    {"label":"Period End","fieldname":"period_end","fieldtype":"Date"},
+    {"label":"Reviewer","fieldname":"reviewer","fieldtype":"Link","options":"User"},
+    {"label":"Self Review","fieldname":"self_review","fieldtype":"Text"},
+    {"label":"Manager Review","fieldname":"manager_review","fieldtype":"Text"},
+    {"label":"Ratings","fieldname":"ratings","fieldtype":"Table","options":"KPI Scorecard Entry"},
+    {"label":"Final Rating","fieldname":"final_rating","fieldtype":"Float"},
+    {"label":"State","fieldname":"state","fieldtype":"Select","options":"Pending Self\nPending Manager\nCompleted"}
+  ],
+  "permissions": [
+    {"role":"Employee","read":1,"write":1,"create":1,"delete":0},
+    {"role":"Manager","read":1,"write":1,"create":1,"delete":0},
+    {"role":"HR Manager","read":1,"write":1,"create":1,"delete":1},
+    {"role":"System Manager","read":1,"write":1,"create":1,"delete":1}
+  ]
+}

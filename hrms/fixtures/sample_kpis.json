@@ -1,0 +1,26 @@
+[
+  {
+    "doctype": "KPI Goal",
+    "title": "Increase Onboarding Completion",
+    "description": "Ensure new hires complete onboarding within 7 days",
+    "owner": "Administrator",
+    "measure_type": "Numeric",
+    "target_value": 95.0,
+    "unit": "%",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-30",
+    "weight": 40
+  },
+  {
+    "doctype": "KPI Goal",
+    "title": "Payroll Accuracy",
+    "description": "Maintain payroll accuracy above threshold",
+    "owner": "Administrator",
+    "measure_type": "Numeric",
+    "target_value": 99.5,
+    "unit": "%",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-30",
+    "weight": 60
+  }
+]

@@ -1,0 +1,12 @@
+{
+ "doctype": "Number Card",
+ "document_type": "Task",
+ "filters_json": "[[\"Task\",\"status\",\"!=\",\"Closed\"]]",
+ "function": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Open Tasks",
+ "module": "HR",
+ "name": "Open Tasks",
+ "type": "Document Type"
+}

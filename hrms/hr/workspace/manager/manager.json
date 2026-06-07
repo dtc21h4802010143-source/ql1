@@ -1,0 +1,66 @@
+{
+ "app": "hrms",
+ "content": "[{\"id\":\"h-mgr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quản lý KPI</b></span>\",\"col\":12}},{\"id\":\"c-giao-viec-mgr\",\"type\":\"card\",\"data\":{\"card_name\":\"Giao việc\",\"col\":4}},{\"id\":\"c-danh-gia-mgr\",\"type\":\"card\",\"data\":{\"card_name\":\"Đánh giá KPI\",\"col\":4}},{\"id\":\"c-bao-cao-mgr\",\"type\":\"card\",\"data\":{\"card_name\":\"Báo cáo\",\"col\":4}}]",
+ "creation": "2026-05-20 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "briefcase",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Quản lý",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Giao việc",
+   "link_count": 0,
+   "link_to": "Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Đánh giá KPI",
+   "link_count": 0,
+    "link_to": "Employee Performance Feedback",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Báo cáo",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  }
+ ],
+ "module": "HR",
+ "name": "Quan-ly",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Task",
+   "label": "Công việc theo phòng",
+   "quick_list_filter": "{\"status\":[\"!=\",\"Closed\"]}"
+  }
+ ],
+ "roles": [
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "Manager"
+  }
+ ],
+ "shortcuts": [],
+ "title": "Quản lý",
+ "type": "Workspace"
+}

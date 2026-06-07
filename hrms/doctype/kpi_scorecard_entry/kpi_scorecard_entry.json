@@ -1,0 +1,17 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Scorecard Entry",
+  "module": "HRMS",
+  "istable": 1,
+  "custom": false,
+  "fields": [
+    {"label":"KPI Goal","fieldname":"kpi_goal","fieldtype":"Link","options":"KPI Goal"},
+    {"label":"Target","fieldname":"target","fieldtype":"Float"},
+    {"label":"Achieved","fieldname":"achieved","fieldtype":"Float"},
+    {"label":"Score","fieldname":"score","fieldtype":"Float"},
+    {"label":"Weight","fieldname":"weight","fieldtype":"Float"}
+  ],
+  "permissions": [
+    {"role":"System Manager","read":1,"write":1}
+  ]
+}
