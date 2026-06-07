@@ -19,11 +19,21 @@ export const createApp = () => {
 
 	const allowedOrigins = new Set([env.clientUrl, "http://localhost:5173", "http://localhost:3000"]);
 	const corsOrigin = (origin, callback) => {
-		if (!origin || allowedOrigins.has(origin) || /^http:\/\/localhost:\d+$/.test(origin)) {
+		if (!origin) {
 			callback(null, true);
 			return;
 		}
-		callback(new Error("Not allowed by CORS"));
+
+		const isAllowed = allowedOrigins.has(origin)
+			|| /^http:\/\/localhost:\d+$/.test(origin)
+			|| /^https:\/\/.+\.onrender\.com$/.test(origin)
+			|| /^https:\/\/.+\.render\.com$/.test(origin);
+
+		if (!isAllowed) {
+			logger.warn("Rejected CORS origin", { origin });
+		}
+
+		callback(null, isAllowed);
 	};
 
 	app.use(cors({
