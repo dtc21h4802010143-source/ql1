@@ -1,12 +1,12 @@
 [project]
 name = "hrms"
+version = "1.0.0"
 authors = [
     { name = "Frappe Technologies Pvt Ltd", email = "developers@frappe.io" },
 ]
 description = "Open Source HR & Payroll Software"
 requires-python = ">=3.10"
 readme = "README.md"
-dynamic = ["version"]
 # --- THÊM ĐOẠN ĐƯỢC BÔI ĐẬM DƯỚI ĐÂY ---
 dependencies = [
     "gunicorn>=21.2.0",
